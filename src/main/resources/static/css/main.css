@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Rubik:wght@400;700&display=swap');
+
+@font-face {
+    font-family: "Bukhari Script";
+    src: url("../assets/fonts/BukhariScript-Regular.otf") format("opentype") ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(250, 239, 231);
+}
+
+h1 {
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Bukhari Script';
+    font-weight: 700;
+    /* color: palevioletred; */
+    color: rgb(71, 58, 141);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(112, 117, 216);
+}
+
+a:hover {
+    color: black;
+}
+
+.custom-form {
+    width: 65%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.align-text {
+    text-align: right;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.name {
+    /* color: rgb(184, 71, 128); */
+    color: rgb(229, 147, 174);
+}
+
+.name:hover {
+    text-decoration: 3px underline wavy palevioletred;
+    text-underline-offset: 8px;
+}
+
+.bookbroker-head h1 {
+    font-size: 3.2em;
+}
+
+/* Project css start */
+
+.overhead {
+    /* background-color: rgb(103, 51, 152); */
+    background-color: rgb(130, 152, 51);
+    color: white;
+    text-align: center;
+    font-size: .9em;
+    padding: 10px;
+}
+
+.overhead p {
+    margin: 0;
+}
+
+.discount {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+}
+
+.shop-header {
+    margin: auto;
+    text-align: center;
+}
+
+.shop-header h1 {
+    font-size: 4em;
+    margin: 15px 0px;
+}
+
+.shop-header hr {
+    border: 3px dashed rgb(112, 117, 216);
+}
+
+.header-content {
+    width: 80%;
+    margin: auto;
+}
+
+.navigation {
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.shop-content {
+    width: 80%;
+    height: 200px;
+    color: rgb(140, 145, 227);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

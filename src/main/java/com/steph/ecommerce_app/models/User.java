@@ -41,6 +41,8 @@ public class User {
     @Size(min = 8, max = 128, message = "Confirm Password must be between 8 and 128 characters")
     private String confirm;
 
+    private boolean isAdmin;
+
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyy-MM-dd")
     private Date createdAt;
@@ -111,6 +113,10 @@ public class User {
 
     public void setConfirm(String confirm) {
         this.confirm = confirm;
+    }
+
+    public boolean getIsAdmin() {
+        return this.isAdmin;
     }
 
     @PreUpdate

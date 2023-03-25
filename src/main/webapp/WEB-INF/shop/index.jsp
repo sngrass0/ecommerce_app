@@ -37,9 +37,9 @@
     <div class="content">
         <div class="banner">
             <span class="banner-txt">Welcome!</soan>
-            </div>
         </div>
         <div class="product-list">
+    </div>
             <!-- <div class="shop-content mt-3">
                 <h4>Whoops! Looks like we're still under construction.</h4>
             </div> -->
@@ -59,6 +59,6 @@
                     <h5>$12.99</h5>
                 </div>
             </div>
-        </div>
+    </div>
 </body>
 </html>

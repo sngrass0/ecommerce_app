@@ -23,19 +23,42 @@
     </div>
     <div class="shop-header">
         <div class="header-content">
-            <h1>Grocery Mart</h1>
+            <h1>Grocery Mart~</h1>
             <div class="navigation">
-                <a href="#">Shop</a>
-                <a href="#">About</a>
+                <a href="#">New</a>
+                <a href="#">All</a>
                 <a href="#">Contact</a>
                 <a href="#">Cart</a>
             </div>
-            <hr>
+            <!-- <hr> -->
         </div>
     </div>
-
-    <div class="shop-content">
-        <h4>Whoops! Looks like we're still under construction.</h4>
-    </div>
+    
+    <div class="content">
+        <div class="banner">
+            <span class="banner-txt">Welcome!</soan>
+            </div>
+        </div>
+        <div class="product-list">
+            <!-- <div class="shop-content mt-3">
+                <h4>Whoops! Looks like we're still under construction.</h4>
+            </div> -->
+            <div class="product-card">
+                <img src="/assets/photos/product_1_1.png" alt="" width="300px">
+                <div class="mt-3">
+                    <h5>Blue Bell Earrings</h5>
+                    <hr>
+                    <h5>$12.99</h5>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/assets/photos/product_1_1.png" alt="" width="300px">
+                <div class="mt-3">
+                    <h5>Blue Bell Earrings</h5>
+                    <hr>
+                    <h5>$12.99</h5>
+                </div>
+            </div>
+        </div>
 </body>
 </html>

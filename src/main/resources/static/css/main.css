@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "Bukhari Script";
-    src: url("../assets/fonts/BukhariScript-Regular.otf") format("opentype") ;
+    src: url("../assets/fonts/BukhariScript-Regular.otf") format("opentype");
 }
 
 * {
@@ -44,6 +44,10 @@ a:hover {
     text-align: right;
 }
 
+.align-text-rev {
+    text-align: left;
+}
+
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -73,7 +77,6 @@ a:hover {
 /* Project css start */
 
 .overhead {
-    /* background-color: rgb(103, 51, 152); */
     background-color: rgb(130, 152, 51);
     color: white;
     text-align: center;
@@ -110,6 +113,7 @@ a:hover {
 }
 
 .navigation {
+    font-size: 1.2em;
     margin: auto;
     margin-top: 35px;
     display: flex;
@@ -118,7 +122,7 @@ a:hover {
 }
 
 .content {
-    background-color: white;
+    /* background-color: white; */
 }
 
 .shop-content {
@@ -156,4 +160,67 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.product-card {
+    padding: 15px;
+    color: rgb(112, 117, 216);
+}
+
+.product-card img {
+    border-radius: 10px;
+}
+
+.product-card img:hover {
+    opacity: 0.8;
+    transition: opacity .2s ease;
+}
+
+.product-name:after {
+    bottom: -8px;
+    content: "";
+    background-color: #104F0F;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 20px;
+}
+
+.fade-in {
+    animation: fadeIn .7s;
+    -webkit-animation: fadeIn .7s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -1.75%, 0);
+    }
+
+    to {
+        opacity: 100;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.login {
+    width: 20%;
+    margin-top: -10%;
+    text-align: center;
+}
+
+.form-bg {
+    background-color: rgb(250, 239, 231);
+    border-color: black;
 }

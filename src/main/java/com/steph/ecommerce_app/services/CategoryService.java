@@ -16,7 +16,7 @@ public class CategoryService {
     CategoryRepository categoryRepository;
 
     // READ ALL
-    public List<Category> getAllCategorys() {
+    public List<Category> getAllCategories() {
         return categoryRepository.findAll();
     }
 

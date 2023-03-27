@@ -18,57 +18,28 @@
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
 </head>
 <body>
-   <div class="container">
-<h1  class="align-content-center">Login and Registration</h1>
-    <div class="row">
-        <div class="col">
-            <h2>Register</h2>
-            <form:form action="/register" method="post" modelAttribute="newUser">
+   <div class="login-container">
+       <div class="login fade-in">
+           <h2>Login</h2>
+           <div class="form-group">
+               <form:form action="/login" method="post" modelAttribute="newLogin">
+                   <div class="form-group mb-2 align-text-rev">
+                       <form:label path="email">email</form:label>
+                       <form:input  class="form-control form-bg" path="email"/>
+                       <form:errors path="email" class="text-danger"/>
+                   </div>
+                   <div class="mb-2 align-text-rev">
+                       <form:label path="password">password</form:label>
+                       <form:input  class="form-control form-bg" path="password" type="password"/>
+                       <form:errors path="password" class="text-danger"/>
+                   </div>
                 <div>
-                    <div class="form-group mb-2">
-                    <form:label path="userName">userName</form:label>
-                    <form:input  class="form-control" path="userName"/>
-                    <form:errors path="userName" class="text-danger"/>
-                    </div>
-                    <div class="form-group mb-2">
-                    <form:label path="email">email</form:label>
-                    <form:input  class="form-control" path="email"/>
-                    <form:errors path="email" class="text-danger"/>
-                    </div>
-                    <div class="mb-2">
-                    <form:label path="password">password</form:label>
-                    <form:input  class="form-control" path="password" type="password"/>
-                    <form:errors path="password" class="text-danger" type="password"/>
-                    </div>
-                    <div class="mb-2">
-                    <form:label path="confirm">confirm password</form:label>
-                    <form:input  class="form-control" path="confirm"/>
-                    <form:errors path="confirm" class="text-danger"/>
-                    </div>
+                    <a href="/">Don't have an account?</a>
                 </div>
-                <input type="submit" value="register" class="btn btn-outline-dark mt-3">
-            </form:form>
-        </div>
-        <div class="col">
-            <h2>Login</h2>
-            <div class="form-group">
-                <form:form action="/login" method="post" modelAttribute="newLogin">
-                    <div class="form-group mb-2">
-                        <form:label path="email">email</form:label>
-                        <form:input  class="form-control" path="email"/>
-                        <form:errors path="email" class="text-danger"/>
-                    </div>
-                    <div class="mb-2">
-                        <form:label path="password">password</form:label>
-                        <form:input  class="form-control" path="password" type="password"/>
-                        <form:errors path="password" class="text-danger"/>
-                    </div>
-                <input type="submit" value="login" class="btn btn-outline-dark mt-3">
-                </form:form>
-            </div>
-        </div>
-
-    </div>
+               <input type="submit" value="login" class="btn btn-outline-dark mt-3">
+               </form:form>
+           </div>
+       </div>
 </div>
 </body>
 </html>

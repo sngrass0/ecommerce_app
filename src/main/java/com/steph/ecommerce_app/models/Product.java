@@ -30,10 +30,10 @@ public class Product {
     @NotEmpty(message = "name field cannot be empty.")
     private String name;
 
-    @NotEmpty(message = "price field cannot be empty")
+    @Min(value = 0, message = "Price should be greater than 0")
     private float price;
-
-    @Min(value = 0)
+    
+    @Min(value = 0, message = "Stock input is invalid")
     private Integer stock;
 
     private String description;
@@ -53,6 +53,17 @@ public class Product {
     private List<Category> categories;
 
     public Product() {
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " id='" + getId() + "'" +
+                ", Product Name ='" + getName() + "'" +
+                ", price='" + getPrice() + "'" +
+                ", stock='" + getStock() + "'" +
+                ", description='" + getDescription() + "'" +
+                "}";
     }
 
     @PrePersist

@@ -22,13 +22,13 @@
         <p>Sale! : Get 15% off your order using code <span class="discount">Love-Heart</span> </p>
     </div>
     <div class="shop-header">
-        <div class="header-content">
+        <div class="header-content fade-in">
             <h1>Grocery Mart~</h1>
             <div class="navigation">
-                <a href="#">New</a>
+                <a href="#">NEW</a>
                 <a href="#">All</a>
-                <a href="#">Contact</a>
-                <a href="#">Cart</a>
+                <a href="#">Categories</a>
+                <a href="#">FAQ</a>
             </div>
             <!-- <hr> -->
         </div>
@@ -38,27 +38,44 @@
         <div class="banner">
             <span class="banner-txt">Welcome!</soan>
         </div>
-        <div class="product-list">
-    </div>
-            <!-- <div class="shop-content mt-3">
-                <h4>Whoops! Looks like we're still under construction.</h4>
-            </div> -->
-            <div class="product-card">
-                <img src="/assets/photos/product_1_1.png" alt="" width="300px">
-                <div class="mt-3">
-                    <h5>Blue Bell Earrings</h5>
-                    <hr>
-                    <h5>$12.99</h5>
+
+        <div class="product-list fade-in">
+                <!-- <div class="shop-content mt-3">
+                    <h4>Whoops! Looks like we're still under construction.</h4>
+                </div> -->
+                <div class="product-card">
+                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
+                    <div class="mt-3">
+                        <h5>Blue Bell Earrings</h5>
+                        <hr>
+                        <h5>$12.99</h5>
+                    </div>
                 </div>
-            </div>
-            <div class="product-card">
-                <img src="/assets/photos/product_1_1.png" alt="" width="300px">
-                <div class="mt-3">
-                    <h5>Blue Bell Earrings</h5>
-                    <hr>
-                    <h5>$12.99</h5>
+                <div class="product-card">
+                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
+                    <div class="mt-3">
+                        <h5>Blue Bell Earrings</h5>
+                        <hr>
+                        <h5>$12.99</h5>
+                    </div>
                 </div>
-            </div>
+                <div class="product-card">
+                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
+                    <div class="mt-3">
+                        <h5>Blue Bell Earrings</h5>
+                        <hr>
+                        <h5>$12.99</h5>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
+                    <div class="mt-3">
+                        <h5>Blue Bell Earrings</h5>
+                        <hr>
+                        <h5>$12.99</h5>
+                    </div>
+                </div>
+        </div>
     </div>
 </body>
 </html>

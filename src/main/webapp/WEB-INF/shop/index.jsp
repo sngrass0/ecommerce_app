@@ -23,7 +23,7 @@
     </div>
     <div class="shop-header">
         <div class="header-content fade-in">
-            <h1>Grocery Mart~</h1>
+            <h1>✧･ﾟtani･ﾟ✧</h1>
             <div class="navigation">
                 <a href="#">NEW</a>
                 <a href="#">All</a>
@@ -43,32 +43,22 @@
                 <!-- <div class="shop-content mt-3">
                     <h4>Whoops! Looks like we're still under construction.</h4>
                 </div> -->
-                <div class="product-card">
-                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
-                    <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
-                        <hr>
-                        <h5>$12.99</h5>
+                <c:forEach var="item"  items="${products}">
+                    <div class="product-card">
+                        <a href="/products/${item.id}">
+                            <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
+                        </a>
+                        <div class="mt-3">
+                            <h5>${item.name}</h5>
+                            <hr>
+                            <h5>
+                                <fmt:formatNumber value = "${item.price}" type = "currency" currencyCode="USD"/>
+                            </h5>
+                        </div>
                     </div>
-                </div>
+                </c:forEach>
                 <div class="product-card">
-                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
-                    <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
-                        <hr>
-                        <h5>$12.99</h5>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
-                    <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
-                        <hr>
-                        <h5>$12.99</h5>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="/assets/photos/product_1_2.png" alt="" width="300px">
+                    <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
                     <div class="mt-3">
                         <h5>Blue Bell Earrings</h5>
                         <hr>

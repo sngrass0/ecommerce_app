@@ -11,14 +11,14 @@ import com.steph.ecommerce_app.services.UserService;
 
 @Controller
 public class AdminController {
-    @Autowired UserService userService;
+    @Autowired
+    UserService userService;
 
     // SHOW - Page
-    // * display admin dash board 
+    // * display admin dash board
     @GetMapping("/admin/dashboard")
     public String adminDash(
-        HttpSession session
-    ) {
+            HttpSession session) {
         if (session.getAttribute("userId") == null) {
             // should take user back home
             return "redirect:/home";
@@ -33,5 +33,5 @@ public class AdminController {
         // show dash
         return "/admin/dashboard.jsp";
     }
-    
+
 }

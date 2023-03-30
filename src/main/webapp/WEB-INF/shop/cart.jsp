@@ -8,20 +8,19 @@
 <!-- for rendering errors on PUT routes -->
 <%@ page isErrorPage="true" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${product.name}</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
-    <!-- header -->
+    <!-- Header -->
     <div class="overhead">
         <p>Sale! : Get 15% off your order using code <span class="discount">Love-Heart</span> </p>
     </div>
@@ -29,7 +28,7 @@
         <a href="">
             <i class="bi bi-search"></i>
         </a>
-        <a href="/cart">
+        <a href="">
             <i class="bi bi-cart"></i>
         </a>
         <c:if test="${!loggedIn}">
@@ -60,38 +59,10 @@
             </div>
         </div>
     </div>
-    <!-- end-headeer -->
-    <div class="content">
-        <div class="product-view">
-            <div class="product-gallery fade-spec">
-                <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="600px">
-            </div>
-            <div class="product-info">
-                <!-- Title -->
-                <h1 class="mb-4">
-                    <c:out value="${product.name}"/>
-                </h1>
-                <!-- Price -->
-                <span>
-                    <fmt:formatNumber value = "${product.price}" type = "currency" currencySymbol="$"/>
-                </span>
-                <!-- Add to Cart -->
-                <a href="" class="btn btn-dark mx-3">Add to Cart</a>
-                <!-- Description -->
-                <p class="mt-2">
-                    <c:out value="${product.description}"/>
-                </p>
-                <!-- Admin Actions -->
-                <c:if test="${isAdmin}">
-                    <!-- Stock -->
-                    <span>
-                        Stock: <c:out value="${product.stock}"/>
-                    </span>
-                    <!-- Edit -->
-                    <a href="/products/${product.id}/edit" class="btn btn-outline-dark">edit</a>
-                </c:if>
-            </div>
-        </div>
+    <!-- Page content -->
+    <div class="content mb-5 cart">
+        <h3>Cart is currently empty</h3>
+        <a href="/home" class="btn btn-outline-dark">Continue Shopping</a>
     </div>
     <hr>
     <!-- Footer -->

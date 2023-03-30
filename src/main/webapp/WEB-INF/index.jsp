@@ -18,7 +18,7 @@
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
 </head>
 <body>
-   <div class="login-container">
+    <div class="login-container">
        <div class="login fade-in">
            <h2>Login</h2>
            <div class="form-group">
@@ -40,6 +40,6 @@
                </form:form>
            </div>
        </div>
-</div>
+    </div>
 </body>
 </html>

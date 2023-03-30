@@ -32,8 +32,8 @@ a {
 a:hover {
     /* color: black; */
     color: rgb(168, 69, 155);
-    text-decoration: 2px underline rgb(168, 69, 155);
-    text-underline-offset: 5px;
+    /* text-decoration: 2px underline rgb(168, 69, 155);
+    text-underline-offset: 5px; */
 }
 
 .custom-form {
@@ -81,7 +81,7 @@ a:hover {
 
 .overhead {
     /* background-color: rgb(130, 152, 51); */
-    background-color: rgb(168, 69, 155);
+    background-color: rgb(218, 115, 204);
     color: white;
     text-align: center;
     font-size: .9em;
@@ -159,12 +159,14 @@ a:hover {
 }
 
 .product-list {
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
     margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 .product-card {
@@ -174,6 +176,7 @@ a:hover {
 
 .product-card img {
     border-radius: 10px;
+    /* border-radius: 50%; */
 }
 
 .product-card img:hover {
@@ -193,6 +196,11 @@ a:hover {
 }
 
 .fade-in {
+    animation: fadeIn .7s, displace .7s;
+    -webkit-animation: fadeIn .7s, displace .7s;
+}
+
+.fade-spec {
     animation: fadeIn .7s;
     -webkit-animation: fadeIn .7s;
 }
@@ -200,11 +208,19 @@ a:hover {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translate3d(0, -1.75%, 0);
     }
 
     to {
         opacity: 100;
+    }
+}
+
+@keyframes displace {
+    from {
+        transform: translate3d(0, -1.75%, 0);
+    }
+
+    to {
         transform: translate3d(0, 0, 0);
     }
 }
@@ -244,7 +260,7 @@ a:hover {
 }
 
 .product-gallery {
-    flex: 2.5;
+    width: 60%;
     text-align: right;
 }
 
@@ -253,6 +269,37 @@ a:hover {
 }
 
 .product-info {
-    flex: 2;
+    width: 40%;
     font-size: 1.6em;
+}
+
+.footer {
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 1.15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-actions {
+    padding-right: 20px;
+    text-align: right;
+    font-size: 1.4em;
+    color: rgb(112, 117, 216);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions i:hover {
+    cursor: pointer;
+}
+
+.cart {
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    /* height: 50vh; */
 }

@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
@@ -58,27 +59,32 @@ public class ProductController {
 
     // UPDATE - Page TODO
     // * end point fetches the edit form to update an existing product
-    @GetMapping("/products/edit")
+    @GetMapping("/products/{id}/edit")
     public String editProduct(
-            @ModelAttribute("product") Product product,
+            @PathVariable("id") Long id,
             Model model,
             HttpSession session) {
         if (session.getAttribute("userId") == null) {
             return "redirect:/logout";
         }
+
+        Product product = productService.getOneProduct(id);
+        model.addAttribute("product", product);
         return "admin/editProduct.jsp";
     }
 
     // UPDATE - Action TODO
     // * end point handles form submit and updates Product in databse
-    @PutMapping("/products")
+    @PutMapping("/products/{id}")
     public String updateProduct(
+            @PathVariable("id") Long id,
             @Valid @ModelAttribute("product") Product product,
             BindingResult result) {
         if (result.hasErrors()) {
             return "admin/editProduct.jsp";
         }
-        return "redirect:/home";
+        productService.updateProduct(product);
+        return "redirect:/products/" + id;
     }
 
     // DELETE - Action TODO

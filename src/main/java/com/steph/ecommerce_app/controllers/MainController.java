@@ -21,7 +21,12 @@ public class MainController {
     UserService userService;
 
     @GetMapping("/")
-    public String index(Model model, HttpSession session) {
+    public String index() {
+        return "redirect:/home";
+    }
+
+    @GetMapping("/account/login")
+    public String loginPage(Model model, HttpSession session) {
         if (session.getAttribute("userId") != null) {
             return "redirect:/home";
         }
@@ -51,6 +56,7 @@ public class MainController {
         // Store user Id and user name into
         session.setAttribute("userId", user.getId());
         session.setAttribute("userName", user.getUserName());
+        session.setAttribute("loggedIn", true);
         return "redirect:/home";
     }
 
@@ -74,6 +80,8 @@ public class MainController {
         // Login user
         session.setAttribute("userId", user.getId());
         session.setAttribute("userName", user.getUserName());
+        session.setAttribute("loggedIn", true);
+        session.setAttribute("isAdmin", user.getIsAdmin());
 
         return "redirect:/home";
     }

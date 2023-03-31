@@ -73,7 +73,7 @@
                 <div class="cart-list">
                     <h2 class="has-dash">Cart</h2>
                     <c:forEach var="item" items="${cart}" varStatus="loop">
-                        <div class="card cart-item">
+                        <div class="card cart-item mb-3">
                             <div class="card-body cart-item-body">
                                 <div class="cart-item-info">
                                     <a href="/products/${item.id}">
@@ -90,10 +90,13 @@
                             </div>
                         </div>
                     </c:forEach>
-                    <h4>
-                        Total: 
-                        <fmt:formatNumber value = "${total}" type = "currency" currencySymbol="$"/>
-                    </h4>
+                    <div class="cart-checkout">
+                        <h4>
+                            Total: 
+                            <fmt:formatNumber value = "${total}" type = "currency" currencySymbol="$"/>
+                        </h4>
+                        <a href="" class="btn btn-dark">Checkout</a>
+                    </div>
                 </div>
             </c:otherwise>
         </c:choose>

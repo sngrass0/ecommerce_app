@@ -366,6 +366,26 @@ h2.has-dash {
     justify-content: space-between;
 }
 
+.cart-checkout::before{
+    top: -18px;
+    content: "";
+    background-color: rgb(54, 50, 50);
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 240px;
+}
+
+.cart-checkout {
+    position: relative;
+    width: 55%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .user-table {
     background: whitesmoke;
     margin-top: 3%;

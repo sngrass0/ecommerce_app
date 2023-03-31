@@ -61,26 +61,39 @@
         </div>
     </div>
     <!-- Page content -->
-    <div class="content mb-5 cart">
+    <div class="content mb-5">
         <c:choose>
             <c:when test="${cart == null || cart.size() == 0}">
-                <h3>Cart is currently empty</h3>
-                <a href="/home" class="btn btn-outline-dark">Continue Shopping</a>
+                <div class="cart">
+                    <h3>Cart is currently empty</h3>
+                    <a href="/home" class="btn btn-outline-dark">Continue Shopping</a>
+                </div>
             </c:when>
             <c:otherwise>
                 <div class="cart-list">
+                    <h2 class="has-dash">Cart</h2>
                     <c:forEach var="item" items="${cart}" varStatus="loop">
-                        <div class="card">
-                            <div class="card-body">
-                                <h2>${item.name}</h2>
-                                <a href="/products/${loop.index}/removefromcart">Remove</a>
+                        <div class="card cart-item">
+                            <div class="card-body cart-item-body">
+                                <div class="cart-item-info">
+                                    <a href="/products/${item.id}">
+                                        <img src="/assets/photos/loona_1.png" alt="artist icon" width="115px" style="border-radius: 5px;">
+                                    </a>
+                                    <div class="align-text-rev cart-item-name">
+                                        <h2>${item.name}</h2>
+                                        <div class="cart-action">
+                                            <fmt:formatNumber value = "${item.price}" type = "currency" currencySymbol="$"/> x 1
+                                            <a href="/products/${loop.index}/removefromcart">Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </c:forEach>
-                    <p>
+                    <h4>
                         Total: 
                         <fmt:formatNumber value = "${total}" type = "currency" currencySymbol="$"/>
-                    </p>
+                    </h4>
                 </div>
             </c:otherwise>
         </c:choose>

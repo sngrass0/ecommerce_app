@@ -71,14 +71,14 @@
                     <div class="product-card">
                         <a href="/products/${item.id}">
                             <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="300px">
+                            <div class="card-info mt-3">
+                                <h5>${item.name}</h5>
+                                <hr>
+                                <h5>
+                                    <fmt:formatNumber value = "${item.price}" type = "currency" currencySymbol="$"/>
+                                </h5>
+                            </div>
                         </a>
-                        <div class="mt-3">
-                            <h5>${item.name}</h5>
-                            <hr>
-                            <h5>
-                                <fmt:formatNumber value = "${item.price}" type = "currency" currencySymbol="$"/>
-                            </h5>
-                        </div>
                     </div>
                 </c:forEach>
                 <div class="product-card">

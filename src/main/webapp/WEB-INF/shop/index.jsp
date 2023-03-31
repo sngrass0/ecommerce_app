@@ -54,8 +54,18 @@
             <h1>✧･ﾟtani･ﾟ✧</h1>
             <div class="navigation">
                 <a href="/products/category/new">NEW</a>
-                <a href="#">All</a>
-                <a href="#">Categories</a>
+                <a href="/home">All</a>
+                <div class="dropdown">
+                    <div onClick="myFunction()" class="dropbtn">
+                        Categories
+                        <i class="bi bi-caret-down col-form-label" style="font-size: .88em;"></i>
+                    </div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/products/category/prints">prints</a>
+                        <a href="/products/category/stickers">stickers</a>
+                        <a href="/products/category/pins">pins</a>
+                    </div>
+                </div>
                 <a href="/about">FAQ</a>
             </div>
         </div>

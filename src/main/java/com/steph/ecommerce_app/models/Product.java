@@ -32,7 +32,7 @@ public class Product {
 
     @Min(value = 0, message = "Price should be greater than 0")
     private float price;
-    
+
     @Min(value = 0, message = "Stock input is invalid")
     private Integer stock;
 
@@ -45,11 +45,7 @@ public class Product {
     private Date updatedAt;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "categories_products", 
-        joinColumns = @JoinColumn(name = "product_id"), 
-        inverseJoinColumns = @JoinColumn(name = "category_id")
-    )
+    @JoinTable(name = "categories_products", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
     private List<Category> categories;
 
     public Product() {
@@ -109,6 +105,14 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Category> getCategories() {
+        return this.categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 
     public Date getCreatedAt() {

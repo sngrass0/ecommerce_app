@@ -30,6 +30,8 @@
         </div>
         <form:form action="/products/${product.id}" method="post" modelAttribute="product" class="form-control">
             <input type="hidden" name="_method" value="put">
+            <form:input path="categories" type="hidden"></form:input>
+
             <!-- Name -->
             <div class="form-group row my-3">
                 <form:label path="name" class="col-sm-3 col-form-label align-text">Name:</form:label>

@@ -427,3 +427,29 @@ h2.has-dash {
     border-color: black;
 
 }
+
+.dropbtn {
+    color: rgb(112, 117, 216);
+}
+
+.dropbtn:hover {
+    cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(250, 239, 231);
+  border: 1px solid rgb(112, 117, 216);
+  /* min-width: 100px; */
+  overflow: auto;
+  z-index: 1;
+  padding: 5px 15px;
+  text-align: left;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.show {display: block;}

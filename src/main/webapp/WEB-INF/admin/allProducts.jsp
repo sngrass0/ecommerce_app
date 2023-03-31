@@ -42,6 +42,7 @@
                     <th scope="col">#</th>
                     <th scope="col">name</th>
                     <th scope="col">stock</th>
+                    <th scope="col">collections</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,6 +51,15 @@
                           <th scope="row">${product.id}</th>
                           <td>${product.name}</td>
                           <td>${product.stock}</td>
+                          <td>
+                            <div class="prod-cat">
+                                <c:forEach var="category" items="${product.categories}">
+                                    <a href="/categories/${category.id}">
+                                        ${category.name}
+                                    </a>
+                                </c:forEach>
+                            </div>
+                          </td>
                         </tr>
                     </c:forEach>
                 </tbody>

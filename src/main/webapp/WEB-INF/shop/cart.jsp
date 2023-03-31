@@ -105,7 +105,7 @@
                             Total: 
                             <fmt:formatNumber value = "${total}" type = "currency" currencySymbol="$"/>
                         </h4>
-                        <a href="" class="btn btn-dark">Checkout</a>
+                        <a href="/clearcart" class="btn btn-dark">Checkout</a>
                     </div>
                 </div>
             </c:otherwise>

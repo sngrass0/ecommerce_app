@@ -103,6 +103,12 @@ public class ShopController {
         return "redirect:/cart";
     }
 
+    @GetMapping("/clearcart")
+    public String clearCart(HttpSession session) {
+        session.removeAttribute("cart");
+        return "redirect:/cart";
+    }
+
     @GetMapping("products/category/{category}")
     public String displayCategoryPage(
         @PathVariable("category") String name,

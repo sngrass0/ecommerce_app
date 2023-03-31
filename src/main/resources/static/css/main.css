@@ -31,7 +31,8 @@ a {
 
 a:hover {
     /* color: black; */
-    color: rgb(168, 69, 155);
+    /* color: rgb(168, 69, 155); */
+    color: rgb(255, 165, 233);
     /* text-decoration: 2px underline rgb(168, 69, 155);
     text-underline-offset: 5px; */
 }
@@ -92,6 +93,15 @@ a:hover {
 
 .overhead p {
     margin: 0;
+}
+
+.admin-overhead {
+    /* background: rgb(138, 248, 153);
+    background: radial-gradient(circle, rgba(138, 248, 153, 0.8505996148459384) 0%, rgba(70, 167, 252, 1) 100%); */
+    background: rgb(70, 97, 252);
+    background: radial-gradient(circle, rgba(70, 97, 252, .5) 0%, rgba(237, 138, 248, 0.8505996148459384) 100%);
+    color: rgb(71, 58, 141);
+    font-weight: 700;
 }
 
 .discount {
@@ -323,4 +333,15 @@ a:hover {
     width: 80%;
     display: flex;
     justify-content: space-between;
+}
+
+.about {
+    color: rgb(71, 58, 141);
+}
+
+.about-text {
+    color: rgb(112, 117, 216);
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
 }

@@ -21,11 +21,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
+    <div class="overhead admin-overhead">
+        <p> Admin Mode </p>
+    </div>
     <div class="custom-form">
         <div class="top-header">
             <a href="/admin/dashboard">
-                <i class="bi bi-arrow-left"></i>
-                Go Back
+                < Go Back
             </a>
         </div>
 

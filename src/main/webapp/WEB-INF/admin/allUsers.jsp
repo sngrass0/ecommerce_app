@@ -23,8 +23,8 @@
 </head>
 <body>
         <!-- Header -->
-        <div class="overhead">
-            <p>You are in Admin Mode </p>
+        <div class="overhead admin-overhead">
+            <p> Admin Mode </p>
         </div>
         <div class="header-actions">
             <div>
@@ -56,7 +56,7 @@
         </div>
         <div class="custom-form">
             <div class="top-header">
-                <a href="/admin/dashboard">Go Back</a>
+                <a href="/admin/dashboard">< Go Back</a>
             </div>
             <table class="table user-table">
                 <thead>

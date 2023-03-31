@@ -23,7 +23,7 @@
 </head>
 <body>
         <!-- Header -->
-        <div class="overhead">
+        <div class="overhead admin-overhead">
             <p>You are in Admin Mode </p>
         </div>
         <div class="header-actions">

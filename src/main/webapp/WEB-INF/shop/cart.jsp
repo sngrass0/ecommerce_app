@@ -61,8 +61,28 @@
     </div>
     <!-- Page content -->
     <div class="content mb-5 cart">
-        <h3>Cart is currently empty</h3>
-        <a href="/home" class="btn btn-outline-dark">Continue Shopping</a>
+        <c:choose>
+            <c:when test="${cart == null || cart.size() == 0}">
+                <h3>Cart is currently empty</h3>
+                <a href="/home" class="btn btn-outline-dark">Continue Shopping</a>
+            </c:when>
+            <c:otherwise>
+                <div class="cart-list">
+                    <c:forEach var="item" items="${cart}" varStatus="loop">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2>${item.name}</h2>
+                                <a href="/products/${loop.index}/removefromcart">Remove</a>
+                            </div>
+                        </div>
+                    </c:forEach>
+                    <p>
+                        Total: 
+                        <fmt:formatNumber value = "${total}" type = "currency" currencySymbol="$"/>
+                    </p>
+                </div>
+            </c:otherwise>
+        </c:choose>
     </div>
     <hr>
     <!-- Footer -->

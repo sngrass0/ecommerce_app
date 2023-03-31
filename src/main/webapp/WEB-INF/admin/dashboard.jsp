@@ -28,20 +28,26 @@
         </div>
         <div class="header-actions">
             <div>
-                <i class="bi bi-bookmark-fill" ></i>
-                <span>Hey ${userName}</span>
+                <span>Hey, ${userName}</span>
             </div>
-            <c:if test="${!loggedIn}">
-                <a href="/account/login">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-            </c:if>
-            <c:if test="${loggedIn}">
-                <a href="/logout">
-                    <!-- <i class="bi bi-box-arrow-right"></i> -->
-                    <i class="bi bi-door-open-fill"></i>
-                </a>
-            </c:if>
+
+            <!-- logged in icons -->
+            <c:choose>
+                <c:when test="${loggedIn}">
+                    <a href="/logout">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <!-- <i class="bi bi-door-open-fill"></i> -->
+                    </a>
+                </c:when>
+
+                <c:otherwise>
+                    <a href="/account/login">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
+            <!-- admin icons -->
             <c:if test="${isAdmin}">
                 <a href="/home">
                     <i class="bi bi-house"></i>
@@ -49,6 +55,9 @@
             </c:if>
         </div>
         <!-- Content -->
+        <div class="text-center">
+            <h2> < Admin Controls > </h2>
+        </div>
         <div class="product-list text-center">
             <div class="card">
                 <a href="/admin/users">
@@ -71,7 +80,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="/products/new">
+                <a href="/admin/products">
                     <div class="card-body">
                         <i class="bi bi-cart3" style="font-size: 2em;"></i>
                         <h4>
@@ -86,6 +95,16 @@
                         <i class="bi bi-box-seam" style="font-size: 2em;"></i>
                         <h4>
                             Orders
+                        </h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="/products/new">
+                    <div class="card-body">
+                        <i class="bi bi-layers" style="font-size: 2em;"></i>
+                        <h4>
+                            Organize
                         </h4>
                     </div>
                 </a>

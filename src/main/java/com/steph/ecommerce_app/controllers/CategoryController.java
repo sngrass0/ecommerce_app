@@ -15,14 +15,21 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.steph.ecommerce_app.models.Category;
+import com.steph.ecommerce_app.models.Product;
+import com.steph.ecommerce_app.models.User;
 import com.steph.ecommerce_app.services.CategoryService;
+import com.steph.ecommerce_app.services.ProductService;
+import com.steph.ecommerce_app.services.UserService;
 
 @Controller
 public class CategoryController {
     
     @Autowired CategoryService categoryService;
+    @Autowired UserService userService;
+    @Autowired ProductService productService;
     // CREATE - Page
     // * end point fetches the create form for a new category
     @GetMapping("/categories/new")
@@ -87,5 +94,46 @@ public class CategoryController {
     @DeleteMapping("/categories")
     public String deleteCategory() {
         return null;
+    }
+
+    @GetMapping("/categories/{id}")
+    public String viewCategory(
+        @PathVariable("id") Long id,
+        HttpSession session,
+        Model model
+    ) {
+        if (session.getAttribute("userId") == null) {
+            // should take user back home
+            return "redirect:/home";
+        }
+
+        // check admin status
+        User user = userService.getUser((Long) session.getAttribute("userId"));
+        if (!user.getIsAdmin()) {
+            return "redirect:/home";
+        }
+        
+        Category category = categoryService.getOneCategory(id);
+        List<Product> assignedProducts = productService.getAssignedProducts(category);
+        List<Product> unassignedProducts = productService.getUnAssignedProducts(category);
+
+        model.addAttribute("category", category);
+        model.addAttribute("assignedProducts", assignedProducts);
+        model.addAttribute("unassignedProducts", unassignedProducts);
+
+        return "admin/showCategory.jsp";
+    }
+
+    @PostMapping("/categories/{id}")
+    public String addProductToCategory(
+        @PathVariable("id") Long id,
+        @RequestParam(value = "productId") Long productId,
+        Model model
+    ) {
+        Category category = categoryService.getOneCategory(id);
+        Product product = productService.getOneProduct(productId);
+        category.getProducts().add(product);
+        categoryService.updateCategory(category);
+        return "redirect:/categories/" + id;
     }
 }

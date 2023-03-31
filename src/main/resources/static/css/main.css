@@ -81,7 +81,9 @@ a:hover {
 
 .overhead {
     /* background-color: rgb(130, 152, 51); */
-    background-color: rgb(218, 115, 204);
+    /* background-color: rgb(218, 115, 204); */
+    background: rgb(255, 165, 233);
+    background: radial-gradient(circle, rgba(255, 165, 233, .5) 0%, rgba(148, 187, 233, 1) 100%);
     color: white;
     text-align: center;
     font-size: .9em;
@@ -143,6 +145,7 @@ a:hover {
     background-image: url("../assets/photos/header.JPG");
     background-position: 25% 75%;
     background-size: 100%;
+
     margin-top: 25px;
     border-top: 2px solid rgb(71, 58, 141);
     color: rgb(71, 58, 141);
@@ -269,8 +272,7 @@ a:hover {
 }
 
 .product-info {
-    width: 40%;
-    font-size: 1.6em;
+    width: 60%;
 }
 
 .footer {
@@ -307,4 +309,18 @@ a:hover {
 .user-table {
     background: whitesmoke;
     margin-top: 3%;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    font-size: 1.6em;
+}
+
+.product-actions {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }

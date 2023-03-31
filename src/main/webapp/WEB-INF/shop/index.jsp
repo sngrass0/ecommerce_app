@@ -55,7 +55,7 @@
                 <a href="#">NEW</a>
                 <a href="#">All</a>
                 <a href="#">Categories</a>
-                <a href="#">FAQ</a>
+                <a href="/about">FAQ</a>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@
                 <c:forEach var="item"  items="${products}">
                     <div class="product-card">
                         <a href="/products/${item.id}">
-                            <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
+                            <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="300px">
                         </a>
                         <div class="mt-3">
                             <h5>${item.name}</h5>

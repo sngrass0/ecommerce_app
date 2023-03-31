@@ -18,15 +18,18 @@
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="custom-form">
         <div class="top-header">
-            <h1>New Category</h1>
-            <a href="/admin/dashboard">Go Back</a>
+            <a href="/admin/dashboard">
+                <i class="bi bi-arrow-left"></i>
+                Go Back
+            </a>
         </div>
 
-        <form:form action="/categories" method="post" modelAttribute="category" class="form-control">
+        <form:form action="/categories" method="post" modelAttribute="category" class="form-control mt-3">
             <!-- Name -->
             <div class="form-group row my-3">
                 <form:label path="name" class="col-sm-3 col-form-label align-text">Name:</form:label>
@@ -43,7 +46,7 @@
             </div>
         </form:form>
         
-        <table class="table user-table">
+        <table class="table user-table table-hover">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -53,10 +56,10 @@
             </thead>
             <tbody>
                 <c:forEach var="category"  items="${categories}">
-                    <tr>
+                    <tr data-href="/categories/${category.id}">
                       <th scope="row">${category.id}</th>
                       <td>${category.name}</td>
-                      <td>0</td>
+                      <td>${category.products.size()}</td>
                     </tr>
                 </c:forEach>
             </tbody>

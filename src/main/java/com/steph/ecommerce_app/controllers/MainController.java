@@ -83,6 +83,10 @@ public class MainController {
         session.setAttribute("loggedIn", true);
         session.setAttribute("isAdmin", user.getIsAdmin());
 
+        if (user.getIsAdmin() == true) {
+            return "redirect:/admin/dashboard";
+        }
+
         return "redirect:/home";
     }
 

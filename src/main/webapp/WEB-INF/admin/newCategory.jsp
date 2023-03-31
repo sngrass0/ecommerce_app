@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Product</title>
+    <title>New Category</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
@@ -22,49 +22,17 @@
 <body>
     <div class="custom-form">
         <div class="top-header">
-            <h1>New Product</h1>
+            <h1>New Category</h1>
             <a href="/admin/dashboard">Go Back</a>
         </div>
-        <form:form action="/products" method="post" modelAttribute="product" class="form-control">
+
+        <form:form action="/categories" method="post" modelAttribute="category" class="form-control">
             <!-- Name -->
             <div class="form-group row my-3">
                 <form:label path="name" class="col-sm-3 col-form-label align-text">Name:</form:label>
                 <div class="col-sm-8">
                     <form:input path="name" class="form-control"/>
                     <form:errors path="name" class="text-danger"/>
-                </div>
-            </div>
-            <div class="form-group row my-3">
-                <div class="col-1">
-
-                </div>
-                <!-- Price -->
-                <div class="col-5">
-                    <div class="row">
-                        <form:label path="price" class="col-sm-4 col-form-label align-text">Listing price:</form:label>
-                        <div class="col-sm-8">
-                            <form:input path="price" class="form-control"/>
-                            <form:errors path="price" class="text-danger"/>
-                        </div>
-                    </div>
-                </div>
-                <!-- Stock -->
-                <div class="col-5">
-                    <div class="row">
-                        <form:label path="stock" class="col-sm-3 col-form-label align-text">stock:</form:label>
-                        <div class="col-sm-8">
-                            <form:input path="stock" class="form-control" type="number"/>
-                            <form:errors path="stock" class="text-danger"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Description -->
-            <div class="form-group row my-3">
-                <form:label path="description" class="col-sm-3 col-form-label align-text">Description:</form:label>
-                <div class="col-sm-8">
-                    <form:textarea path="description" cols="10" rows="5" class="form-control"></form:textarea>
-                    <form:errors path="description" class="text-danger"/>
                 </div>
             </div>
             
@@ -74,6 +42,25 @@
                 <input type="submit" value="Submit" class="btn btn-dark">
             </div>
         </form:form>
+        
+        <table class="table user-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">category</th>
+                <th scope="col"># products</th>
+              </tr>
+            </thead>
+            <tbody>
+                <c:forEach var="category"  items="${categories}">
+                    <tr>
+                      <th scope="row">${category.id}</th>
+                      <td>${category.name}</td>
+                      <td>0</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

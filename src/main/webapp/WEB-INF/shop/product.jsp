@@ -39,12 +39,11 @@
         </c:if>
         <c:if test="${loggedIn}">
             <a href="/logout">
-                <!-- <i class="bi bi-box-arrow-right"></i> -->
                 <i class="bi bi-door-open-fill"></i>
             </a>
         </c:if>
         <c:if test="${isAdmin}">
-            <a href="">
+            <a href="/admin/dashboard">
                 <i class="bi bi-gear"></i>
             </a>
         </c:if>

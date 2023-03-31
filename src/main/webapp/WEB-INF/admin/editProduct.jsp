@@ -71,7 +71,7 @@
             
             <!-- Submit -->
             <div class="text-center">
-                <a href="/home" class="btn btn-outline-dark mx-4">Cancel</a>
+                <a href="/products/${product.id}" class="btn btn-outline-dark mx-4">Cancel</a>
                 <input type="submit" value="Submit" class="btn btn-dark">
             </div>
         </form:form>

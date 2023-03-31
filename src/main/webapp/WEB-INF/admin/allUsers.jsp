@@ -31,6 +31,12 @@
                 <i class="bi bi-bookmark-fill" ></i>
                 <span>Hey ${userName}</span>
             </div>
+            <a href="">
+                <i class="bi bi-search"></i>
+            </a>
+            <a href="">
+                <i class="bi bi-cart"></i>
+            </a>
             <c:if test="${!loggedIn}">
                 <a href="/account/login">
                     <i class="bi bi-person-circle"></i>
@@ -48,48 +54,30 @@
                 </a>
             </c:if>
         </div>
-        <!-- Content -->
-        <div class="product-list text-center">
-            <div class="card">
-                <a href="/admin/users">
-                    <div class="card-body">
-                        <i class="bi bi-person" style="font-size: 2em;"></i>
-                        <h4>
-                            Users
-                        </h4>
-                    </div>
-                </a>
+        <div class="custom-form">
+            <div class="top-header">
+                <a href="/admin/dashboard">Go Back</a>
             </div>
-            <div class="card">
-                <a href="/categories/new">
-                    <div class="card-body">
-                        <i class="bi bi-archive" style="font-size: 2em;"></i>
-                        <h4>
-                            Categories
-                        </h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/products/new">
-                    <div class="card-body">
-                        <i class="bi bi-cart3" style="font-size: 2em;"></i>
-                        <h4>
-                            Products
-                        </h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="/products/new">
-                    <div class="card-body">
-                        <i class="bi bi-box-seam" style="font-size: 2em;"></i>
-                        <h4>
-                            Orders
-                        </h4>
-                    </div>
-                </a>
-            </div>
+            <table class="table user-table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">username</th>
+                    <th scope="col">email</th>
+                    <th scope="col">isAdmin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <c:forEach var="user"  items="${users}">
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>${user.userName}</td>
+                          <td>${user.email}</td>
+                          <td>${user.isAdmin}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+              </table>
         </div>
     <!-- Add Categories -->
 </body>

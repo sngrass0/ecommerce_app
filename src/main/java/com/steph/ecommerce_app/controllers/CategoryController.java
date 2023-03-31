@@ -17,22 +17,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import com.steph.ecommerce_app.models.Category;
-import com.steph.ecommerce_app.models.Product;
 import com.steph.ecommerce_app.services.CategoryService;
-import com.steph.ecommerce_app.services.ProductService;
 
 @Controller
-public class ProductController {
-    @Autowired
-    ProductService productService;
-    @Autowired
-    CategoryService categoryService;
-
+public class CategoryController {
+    
+    @Autowired CategoryService categoryService;
     // CREATE - Page
-    // * end point fetches the create form for a new product
-    @GetMapping("/products/new")
-    public String newProduct(
-            @ModelAttribute("product") Product product,
+    // * end point fetches the create form for a new category
+    @GetMapping("/categories/new")
+    public String newCategory(
+            @ModelAttribute("category") Category category,
             Model model,
             HttpSession session) {
         if (session.getAttribute("userId") == null) {
@@ -40,27 +35,27 @@ public class ProductController {
         }
         List<Category> categories = categoryService.getAllCategories();
         model.addAttribute("categories", categories);
-        return "/admin/newProduct.jsp";
+        return "/admin/newCategory.jsp";
     }
 
     // CREATE - Action
-    // * end point handles the form submit and saves Product to the database
-    @PostMapping("/products")
-    public String createProduct(
-            @Valid @ModelAttribute("product") Product product,
+    // * end point handles the form submit and saves Category to the database
+    @PostMapping("/categories")
+    public String createCategory(
+            @Valid @ModelAttribute("category") Category category,
             BindingResult result) {
         if (result.hasErrors()) {
-            return "/admin/newProduct.jsp";
+            return "/admin/newCategory.jsp";
         }
-        System.out.println(product);
-        productService.createProduct(product);
-        return "redirect:/home";
+        System.out.println(category);
+        categoryService.createCategory(category);
+        return "redirect:/categories/new";
     }
 
     // UPDATE - Page
-    // * end point fetches the edit form to update an existing product
-    @GetMapping("/products/{id}/edit")
-    public String editProduct(
+    // * end point fetches the edit form to update an existing category
+    @GetMapping("/categories/{id}/edit")
+    public String editCategory(
             @PathVariable("id") Long id,
             Model model,
             HttpSession session) {
@@ -68,29 +63,29 @@ public class ProductController {
             return "redirect:/logout";
         }
 
-        Product product = productService.getOneProduct(id);
-        model.addAttribute("product", product);
-        return "admin/editProduct.jsp";
+        Category category = categoryService.getOneCategory(id);
+        model.addAttribute("category", category);
+        return "admin/editCategory.jsp";
     }
 
     // UPDATE - Action
-    // * end point handles form submit and updates Product in databse
-    @PutMapping("/products/{id}")
-    public String updateProduct(
+    // * end point handles form submit and updates Category in databse
+    @PutMapping("/categories/{id}")
+    public String updateCategory(
             @PathVariable("id") Long id,
-            @Valid @ModelAttribute("product") Product product,
+            @Valid @ModelAttribute("category") Category category,
             BindingResult result) {
         if (result.hasErrors()) {
-            return "admin/editProduct.jsp";
+            return "admin/editCategory.jsp";
         }
-        productService.updateProduct(product);
-        return "redirect:/products/" + id;
+        categoryService.updateCategory(category);
+        return "redirect:/categories/" + id;
     }
 
     // DELETE - Action TODO
-    // * end point handles deleting a product
-    @DeleteMapping("/products")
-    public String deleteProduct() {
+    // * end point handles deleting a category
+    @DeleteMapping("/categories")
+    public String deleteCategory() {
         return null;
     }
 }

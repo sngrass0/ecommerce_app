@@ -43,7 +43,7 @@
             </a>
         </c:if>
         <c:if test="${isAdmin}">
-            <a href="">
+            <a href="/admin/dashboard">
                 <i class="bi bi-gear"></i>
             </a>
         </c:if>

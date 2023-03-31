@@ -1,5 +1,6 @@
 package com.steph.ecommerce_app.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -60,6 +61,10 @@ public class UserService {
         }
         // otherwise return user object
         return user;
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
     public User getUser(Long id) {

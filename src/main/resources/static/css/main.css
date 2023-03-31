@@ -303,3 +303,8 @@ a:hover {
     padding-bottom: 10%;
     /* height: 50vh; */
 }
+
+.user-table {
+    background: whitesmoke;
+    margin-top: 3%;
+}

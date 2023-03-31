@@ -345,3 +345,9 @@ a:hover {
     margin: auto;
     margin-top: 20px;
 }
+
+.socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}

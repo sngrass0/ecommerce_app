@@ -17,7 +17,8 @@
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
     <!-- Option 1: Include in HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -102,8 +103,13 @@
     <!-- Footer -->
     <div class="footer">
         <div class="copyright">
+            <div class="socials mb-3">
+                <a href="https://twitter.com/jellyflavor" class="fa fa-twitter"></a>
+                <a href="https://twitter.com/jellyflavor" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/jellyflavor" class="fa fa-tumblr"></a>
+            </div>
             <p>
-                Stephanie Grasso © 2023. All rights reserved.
+                © 2023. All rights reserved.
             </p>
             <p>
                 <a href=""> something </a> | <a href=""> something </a> | <a href=""> something </a>

@@ -54,7 +54,7 @@
             <h1>✧･ﾟtani･ﾟ✧</h1>
             <div class="navigation">
                 <a href="/products/category/new">NEW</a>
-                <a href="#">All</a>
+                <a href="/home">All</a>
                 <a href="#">Categories</a>
                 <a href="/about">FAQ</a>
             </div>
@@ -63,11 +63,11 @@
     <!-- Page content -->
     <div class="content mb-5">
         <div class="banner">
-            <span class="banner-txt">Welcome!</soan>
+            <span class="banner-txt">${category.name}</soan>
         </div>
         
         <div class="product-list fade-in">
-                <c:forEach var="item"  items="${products}">
+                <c:forEach var="item"  items="${category.products}">
                     <div class="product-card">
                         <a href="/products/${item.id}">
                             <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="300px">
@@ -81,22 +81,6 @@
                         </a>
                     </div>
                 </c:forEach>
-                <div class="product-card">
-                    <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
-                    <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
-                        <hr>
-                        <h5>$12.99</h5>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
-                    <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
-                        <hr>
-                        <h5>$12.99</h5>
-                    </div>
-                </div>
         </div>
     </div>
     <hr>

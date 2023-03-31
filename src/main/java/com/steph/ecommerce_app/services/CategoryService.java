@@ -37,6 +37,13 @@ public class CategoryService {
         return category;
     }
 
+    // READ ONE
+    public Category getOneCategoryByName(String name) {
+        Optional<Category> optionalcategory = categoryRepository.findByName(name);
+        Category category = optionalcategory.orElse(null);
+        return category;
+    }
+
     // CREATE
     public Category createCategory(Category category) {
         return categoryRepository.save(category);

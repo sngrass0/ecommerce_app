@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.steph.ecommerce_app.models.Cart;
+import com.steph.ecommerce_app.models.Category;
 import com.steph.ecommerce_app.models.Product;
+import com.steph.ecommerce_app.services.CategoryService;
 import com.steph.ecommerce_app.services.ProductService;
 import com.steph.ecommerce_app.services.UserService;
 
@@ -20,6 +22,7 @@ import com.steph.ecommerce_app.services.UserService;
 public class ShopController {
     @Autowired ProductService productService;
     @Autowired UserService userService;
+    @Autowired CategoryService categoryService;
 
     // READ ALL - Page
     // home page : displays all products as default
@@ -98,5 +101,15 @@ public class ShopController {
         cart.removeCartItem(index);
 
         return "redirect:/cart";
+    }
+
+    @GetMapping("products/category/{category}")
+    public String displayCategoryPage(
+        @PathVariable("category") String name,
+        Model model
+    ) {
+        Category category = categoryService.getOneCategoryByName(name);
+        model.addAttribute("category", category);
+        return "/shop/category.jsp";
     }
 }

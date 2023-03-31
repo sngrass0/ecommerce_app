@@ -90,7 +90,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="/products/new">
+                <a href="/admin/orders">
                     <div class="card-body">
                         <i class="bi bi-box-seam" style="font-size: 2em;"></i>
                         <h4>
@@ -100,7 +100,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="/products/new">
+                <a href="/admin/organize">
                     <div class="card-body">
                         <i class="bi bi-layers" style="font-size: 2em;"></i>
                         <h4>

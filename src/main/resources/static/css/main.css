@@ -421,3 +421,9 @@ h2.has-dash {
     gap: 15px;
     justify-content: center;
 }
+
+.cat-form {
+    background-color: rgb(250, 239, 231);
+    border-color: black;
+
+}

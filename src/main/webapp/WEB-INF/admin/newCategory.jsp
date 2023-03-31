@@ -31,21 +31,23 @@
             </a>
         </div>
 
-        <form:form action="/categories" method="post" modelAttribute="category" class="form-control mt-3">
+        <form:form action="/categories" method="post" modelAttribute="category" class="mt-3">
             <!-- Name -->
-            <div class="form-group row my-3">
-                <form:label path="name" class="col-sm-3 col-form-label align-text">Name:</form:label>
-                <div class="col-sm-8">
-                    <form:input path="name" class="form-control"/>
+            <div class="form-group row my-3 justify-content-center">
+                <form:label path="name" class="col-sm-1 col-form-label align-text">Name:</form:label>
+                <div class="col-sm-6">
+                    <form:input path="name" class="form-control cat-form"/>
                     <form:errors path="name" class="text-danger"/>
+                </div>
+                <div class="col-sm-2">
+                    <input type="submit" value="Save" class="btn btn-dark">
                 </div>
             </div>
             
             <!-- Submit -->
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <a href="/admin/dashboard" class="btn btn-outline-dark mx-4">Cancel</a>
-                <input type="submit" value="Submit" class="btn btn-dark">
-            </div>
+            </div> -->
         </form:form>
         
         <table class="table user-table table-hover">

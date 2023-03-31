@@ -84,4 +84,14 @@ public class AdminController {
         return "admin/allProducts.jsp";
     }
 
+    @GetMapping("admin/orders")
+    public String manageOrders() {
+        return "admin/wip.jsp";
+    }
+
+    @GetMapping("admin/organize")
+    public String manageOrganization() {
+        return "admin/wip.jsp";
+    }
+
 }

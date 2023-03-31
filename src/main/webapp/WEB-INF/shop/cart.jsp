@@ -53,10 +53,13 @@
         <div class="header-content fade-in">
             <h1>✧･ﾟtani･ﾟ✧</h1>
             <div class="navigation">
-                <a href="#">NEW</a>
+                <a href="/products/category/new">NEW</a>
                 <a href="/home">All</a>
-                <a href="#">Categories</a>
-                <a href="#">FAQ</a>
+                <a href="#">
+                    Categories
+                    <i class="bi bi-caret-down col-form-label" style="font-size: .88em;"></i>
+                </a>
+                <a href="/about">FAQ</a>
             </div>
         </div>
     </div>
@@ -77,7 +80,7 @@
                             <div class="card-body cart-item-body">
                                 <div class="cart-item-info">
                                     <a href="/products/${item.id}">
-                                        <img src="/assets/photos/loona_1.png" alt="artist icon" width="115px" style="border-radius: 5px;">
+                                        <img src="/assets/photos/loona_2.jpeg" alt="artist icon" width="115px" style="border-radius: 5px;">
                                     </a>
                                     <div class="align-text-rev cart-item-name">
                                         <h2>${item.name}</h2>

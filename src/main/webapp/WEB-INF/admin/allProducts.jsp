@@ -24,43 +24,14 @@
 <body>
         <!-- Header -->
         <div class="overhead admin-overhead">
-            <p>You are in Admin Mode </p>
-        </div>
-        <div class="header-actions">
-            <div>
-                <i class="bi bi-bookmark-fill" ></i>
-                <span>Hey ${userName}</span>
-            </div>
-            <a href="">
-                <i class="bi bi-search"></i>
-            </a>
-            <a href="">
-                <i class="bi bi-cart"></i>
-            </a>
-            <c:if test="${!loggedIn}">
-                <a href="/account/login">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-            </c:if>
-            <c:if test="${loggedIn}">
-                <a href="/logout">
-                    <!-- <i class="bi bi-box-arrow-right"></i> -->
-                    <i class="bi bi-door-open-fill"></i>
-                </a>
-            </c:if>
-            <c:if test="${isAdmin}">
-                <a href="/home">
-                    <i class="bi bi-house"></i>
-                </a>
-            </c:if>
+            <p> Admin Mode </p>
         </div>
         <div class="custom-form">
             <div class="top-header">
                 <a href="/admin/dashboard">
-                    <i class="bi bi-arrow-left"></i>
-                    Go Back
+                    < Go Back
                 </a>
-                <a href="/products/new" class="btn btn-outline-dark">+ Add Product</a>
+                <a href="/products/new" class="btn btn-dark">+ Add</a>
             </div>
             <table class="table user-table table-hover">
                 <thead>
@@ -72,7 +43,7 @@
                 </thead>
                 <tbody>
                     <c:forEach var="product"  items="${products}">
-                        <tr data-href="/home">
+                        <tr data-href="/products/${product.id}">
                           <th scope="row">${product.id}</th>
                           <td>${product.name}</td>
                           <td>${product.stock}</td>

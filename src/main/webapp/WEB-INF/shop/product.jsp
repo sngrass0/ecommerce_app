@@ -53,10 +53,13 @@
         <div class="header-content fade-in">
             <h1>✧･ﾟtani･ﾟ✧</h1>
             <div class="navigation">
-                <a href="#">NEW</a>
+                <a href="/products/category/new">NEW</a>
                 <a href="/home">All</a>
-                <a href="#">Categories</a>
-                <a href="#">FAQ</a>
+                <a href="#">
+                    Categories
+                    <i class="bi bi-caret-down col-form-label" style="font-size: .88em;"></i>
+                </a>
+                <a href="/about">FAQ</a>
             </div>
         </div>
     </div>
@@ -64,7 +67,7 @@
     <div class="content">
         <div class="product-view">
             <div class="product-gallery fade-spec">
-                <img src="/assets/photos/loona_1.png" alt="gallery item" width="600px">
+                <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="600px">
             </div>
             <div class="product-details">
                 <!-- Product Info -->

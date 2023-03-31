@@ -55,7 +55,10 @@
             <div class="navigation">
                 <a href="/products/category/new">NEW</a>
                 <a href="/home">All</a>
-                <a href="#">Categories</a>
+                <a href="#">
+                    Categories
+                    <i class="bi bi-caret-down col-form-label" style="font-size: .88em;"></i>
+                </a>
                 <a href="/about">FAQ</a>
             </div>
         </div>

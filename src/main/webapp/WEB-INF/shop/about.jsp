@@ -58,13 +58,13 @@
         <div class="header-content fade-in">
             <h1>✧･ﾟtani･ﾟ✧</h1>
             <div class="navigation">
-                <a href="#">NEW</a>
+                <a href="/products/category/new">NEW</a>
                 <a href="/home">All</a>
                 <a href="#">
                     Categories
                     <i class="bi bi-caret-down col-form-label" style="font-size: .88em;"></i>
                 </a>
-                <a href="#">FAQ</a>
+                <a href="/about">FAQ</a>
             </div>
         </div>
     </div>

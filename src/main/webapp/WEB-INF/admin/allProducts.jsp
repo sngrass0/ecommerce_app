@@ -33,6 +33,9 @@
                 </a>
                 <a href="/products/new" class="btn btn-dark">+ Add</a>
             </div>
+            <div class="page-title text-center mb-5">
+                <h2>All Products</h2>
+            </div>
             <table class="table user-table table-hover">
                 <thead>
                   <tr>

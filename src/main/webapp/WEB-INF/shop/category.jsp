@@ -76,22 +76,32 @@
             <span class="banner-txt">${category.name}</soan>
         </div>
         
-        <div class="product-list fade-in">
-                <c:forEach var="item"  items="${category.products}">
-                    <div class="product-card">
-                        <a href="/products/${item.id}">
-                            <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="300px">
-                            <div class="card-info mt-3">
-                                <h5>${item.name}</h5>
-                                <hr>
-                                <h5>
-                                    <fmt:formatNumber value = "${item.price}" type = "currency" currencySymbol="$"/>
-                                </h5>
+        <c:choose>
+            <c:when test="${category.products.size() <= 0}">
+                <div class="text-center my-5 py-5">
+                    <h2>Whoops looks like there's nothing here</h2>
+                </div>
+            </c:when>
+
+            <c:otherwise>
+                <div class="product-list fade-in">
+                        <c:forEach var="item"  items="${category.products}">
+                            <div class="product-card">
+                                <a href="/products/${item.id}">
+                                    <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="300px">
+                                    <div class="card-info mt-3">
+                                        <h5>${item.name}</h5>
+                                        <hr>
+                                        <h5>
+                                            <fmt:formatNumber value = "${item.price}" type = "currency" currencySymbol="$"/>
+                                        </h5>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:forEach>
-        </div>
+                        </c:forEach>
+                </div>
+            </c:otherwise>
+        </c:choose>
     </div>
     <hr>
     <!-- Footer -->

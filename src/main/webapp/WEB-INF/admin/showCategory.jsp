@@ -21,29 +21,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
-    <h1>${category.name}</h1>
-    <form action="/categories/${id}" method="post">
-        <h4>Add Product:</h4>				
-        <select name="productId" id="productId" class="input">
-            <c:forEach var="product" items="${unassignedProducts}">
-                <option value="${product.id}">${product.name}</option>
-            </c:forEach>
-        </select>
-        <input class="input" class="button" type="submit" value="Add"/>
-    </form>
-    <c:forEach var="item" items="${assignedProducts}">
-        <div class="product-card">
-            <a href="/products/${item.id}">
-                <img src="/assets/photos/loona_1.png" alt="gallery item" width="300px">
+    <div class="overhead admin-overhead">
+        <p> Admin Mode </p>
+    </div>
+    <div class="custom-form-2">
+        <div class="top-header">
+            <a href="/admin/dashboard">
+                < Go Back
             </a>
-            <div class="mt-3">
-                <h5>${item.name}</h5>
-                <hr>
-                <h5>
-                    <fmt:formatNumber value = "${item.price}" type = "currency" currencySymbol="$"/>
-                </h5>
-            </div>
         </div>
-    </c:forEach>
+        <div class="page-title text-center">
+            <h2>${category.name}</h2>
+        </div>
+        <form action="/categories/${id}" method="post">
+            <h4>Add Product:</h4>				
+            <select name="productId" id="productId" class="input">
+                <c:forEach var="product" items="${unassignedProducts}">
+                    <option value="${product.id}">${product.name}</option>
+                </c:forEach>
+            </select>
+            <input class="btn btn-dark btn-sm" type="submit" value="Add"/>
+        </form>
+        <br>
+        <hr>
+    </div>
+    <div class="product-list">
+        <c:forEach var="item" items="${assignedProducts}">
+            <div class="product-card text-center">
+                <a href="/products/${item.id}">
+                    <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="250px">
+                </a>
+                <div class="mt-3">
+                    <h5>${item.name}</h5>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
 </body>
 </html>

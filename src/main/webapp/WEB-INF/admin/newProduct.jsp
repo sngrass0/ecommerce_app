@@ -20,10 +20,15 @@
     <script type="text/javascript" src="/js/app.js"></script><!-- change to match your file/naming structure -->
 </head>
 <body>
+    <div class="overhead admin-overhead">
+        <p> Admin Mode </p>
+    </div>
     <div class="custom-form">
         <div class="top-header">
-            <h1>New Product</h1>
-            <a href="/admin/dashboard">Go Back</a>
+            <a href="/admin/dashboard">< Go Back</a>
+        </div>
+        <div class="page-title text-center mb-5">
+            <h2>New Product Listing</h2>
         </div>
         <form:form action="/products" method="post" modelAttribute="product" class="form-control">
             <!-- Name -->

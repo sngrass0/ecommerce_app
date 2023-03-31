@@ -25,8 +25,10 @@
     </div>
     <div class="custom-form">
         <div class="top-header">
-            <h1>New Product</h1>
-            <a href="/products/${product.id}">Go Back</a>
+            <a href="/products/${product.id}">< Go Back</a>
+        </div>
+        <div class="page-title text-center mb-5">
+            <h2>Edit Product Listing</h2>
         </div>
         <form:form action="/products/${product.id}" method="post" modelAttribute="product" class="form-control">
             <input type="hidden" name="_method" value="put">

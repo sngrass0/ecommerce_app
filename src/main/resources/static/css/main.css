@@ -45,6 +45,21 @@ a:hover {
     margin-top: 3%;
 }
 
+.custom-form-2 {
+    width: 85%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.page-title h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: rgb(71, 58, 141);
+    text-decoration: 6px underline dotted rgb(71, 58, 141);
+    text-underline-offset: 12px;
+}
+
 .align-text {
     text-align: right;
 }

@@ -30,7 +30,9 @@
                 < Go Back
             </a>
         </div>
-
+        <div class="page-title text-center mb-5">
+            <h2>All Categories</h2>
+        </div>
         <form:form action="/categories" method="post" modelAttribute="category" class="mt-3">
             <!-- Name -->
             <div class="form-group row my-3 justify-content-center">

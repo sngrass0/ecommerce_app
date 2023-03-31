@@ -26,39 +26,14 @@
         <div class="overhead admin-overhead">
             <p> Admin Mode </p>
         </div>
-        <div class="header-actions">
-            <div>
-                <i class="bi bi-bookmark-fill" ></i>
-                <span>Hey ${userName}</span>
-            </div>
-            <a href="">
-                <i class="bi bi-search"></i>
-            </a>
-            <a href="">
-                <i class="bi bi-cart"></i>
-            </a>
-            <c:if test="${!loggedIn}">
-                <a href="/account/login">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-            </c:if>
-            <c:if test="${loggedIn}">
-                <a href="/logout">
-                    <!-- <i class="bi bi-box-arrow-right"></i> -->
-                    <i class="bi bi-door-open-fill"></i>
-                </a>
-            </c:if>
-            <c:if test="${isAdmin}">
-                <a href="/home">
-                    <i class="bi bi-house"></i>
-                </a>
-            </c:if>
-        </div>
         <div class="custom-form">
             <div class="top-header">
                 <a href="/admin/dashboard">< Go Back</a>
             </div>
-            <table class="table user-table">
+            <div class="page-title text-center mb-5">
+                <h2>All Users</h2>
+            </div>
+            <table class="table user-table table-hover">
                 <thead>
                   <tr>
                     <th scope="col">#</th>

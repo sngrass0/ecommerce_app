@@ -88,6 +88,11 @@
                         <c:forEach var="item"  items="${category.products}">
                             <div class="product-card">
                                 <a href="/products/${item.id}">
+                                    <c:if test='${item.hasCategory("new")}'>
+                                        <div class="new-banner">
+                                            new
+                                        </div>
+                                    </c:if>
                                     <c:if test='${category.name.equals("new")}'>
                                         <div class="new-banner">
                                             new

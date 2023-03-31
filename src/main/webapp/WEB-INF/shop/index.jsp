@@ -80,7 +80,7 @@
                 <c:forEach var="item"  items="${products}">
                     <div class="product-card">
                         <a href="/products/${item.id}">
-                            <c:if test='${product.categories.contains("new")}'>
+                            <c:if test='${item.hasCategory("new")}'>
                                 <div class="new-banner">
                                     new
                                 </div>

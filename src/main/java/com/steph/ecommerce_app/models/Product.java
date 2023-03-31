@@ -108,11 +108,22 @@ public class Product {
     }
 
     public List<Category> getCategories() {
+        System.out.println("hey");
         return this.categories;
     }
 
     public void setCategories(List<Category> categories) {
         this.categories = categories;
+    }
+
+    public boolean hasCategory(String target) {
+        System.out.println(target);
+        for (Category category : this.categories) {
+            if (category.getName().equals(target)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public Date getCreatedAt() {

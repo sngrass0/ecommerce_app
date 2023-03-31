@@ -478,3 +478,9 @@ h2.has-dash {
 .prod-cat a:hover{
     text-decoration: 3px underline dotted rgb(140, 145, 227);
 }
+
+.admin-dash h2 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: rgb(112, 117, 216);
+}

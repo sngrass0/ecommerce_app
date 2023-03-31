@@ -92,9 +92,9 @@
                     </div>
                 </c:forEach>
                 <div class="product-card">
-                    <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
+                    <img src="/assets/photos/loona_1.png" alt="gallery item" width="300px">
                     <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
+                        <h5>Listing 1</h5>
                         <hr>
                         <h5>$12.99</h5>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="product-card">
                     <img src="/assets/photos/scara_1.jpeg" alt="gallery item" width="300px">
                     <div class="mt-3">
-                        <h5>Blue Bell Earrings</h5>
+                        <h5>Listing 0</h5>
                         <hr>
                         <h5>$12.99</h5>
                     </div>

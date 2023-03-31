@@ -55,7 +55,7 @@
             </c:if>
         </div>
         <!-- Content -->
-        <div class="text-center">
+        <div class="admin-dash text-center">
             <h2> < Admin Controls > </h2>
         </div>
         <div class="product-list text-center">

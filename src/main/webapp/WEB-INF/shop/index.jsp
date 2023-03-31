@@ -80,6 +80,11 @@
                 <c:forEach var="item"  items="${products}">
                     <div class="product-card">
                         <a href="/products/${item.id}">
+                            <c:if test='${product.categories.contains("new")}'>
+                                <div class="new-banner">
+                                    new
+                                </div>
+                            </c:if>
                             <img src="/assets/photos/loona_2.jpeg" alt="gallery item" width="300px">
                             <div class="card-info mt-3">
                                 <h5>${item.name}</h5>

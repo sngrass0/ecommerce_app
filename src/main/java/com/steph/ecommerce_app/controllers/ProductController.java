@@ -89,8 +89,12 @@ public class ProductController {
 
     // DELETE - Action TODO
     // * end point handles deleting a product
-    @DeleteMapping("/products")
-    public String deleteProduct() {
-        return null;
+    @DeleteMapping("/products/{id}")
+    public String deleteProduct(
+        @PathVariable("id") Long id,
+        HttpSession session
+    ){
+        productService.deleteProduct(id);
+        return "redirect:/admin/products";
     }
 }

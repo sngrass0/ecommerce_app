@@ -102,11 +102,16 @@
                             Stock: <c:out value="${product.stock}"/>
                         </p>
 
-                        <div>
+                        <div class="actions">
                             <!-- Edit -->
-                            <a href="/products/${product.id}/edit" class="btn btn-outline-dark">edit</a>
+                            <div>
+                                <a href="/products/${product.id}/edit" class="btn btn-outline-dark">edit</a>
+                            </div>
                             <!-- Delete -->
-                            <a href="" class="btn btn-dark">delete</a>
+                            <form action="/products/${product.id}" method="post">
+                                <input type="hidden" name="_method" value="delete">
+                                <input type="submit" value="Delete" class="btn btn-dark">
+                            </form>
                         </div>
                     </c:if>
                 </div>

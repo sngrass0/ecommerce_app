@@ -41,8 +41,10 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">name</th>
+                    <th scope="col">date created</th>
                     <th scope="col">stock</th>
                     <th scope="col">collections</th>
+                    <th scope="col">actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,6 +52,9 @@
                         <tr data-href="/products/${product.id}">
                           <th scope="row">${product.id}</th>
                           <td>${product.name}</td>
+                          <td>
+                            <fmt:formatDate value="${product.createdAt}" pattern="yyyy-MM-dd HH:mm:ss" />
+                          </td>
                           <td>${product.stock}</td>
                           <td>
                             <div class="prod-cat">
@@ -59,6 +64,12 @@
                                     </a>
                                 </c:forEach>
                             </div>
+                          </td>
+                          <td>
+                            <form action="/products/${product.id}" method="post">
+                                <input type="hidden" name="_method" value="delete">
+                                <input type="submit" value="Delete" class="btn btn-dark btn-sm">
+                            </form>
                           </td>
                         </tr>
                     </c:forEach>

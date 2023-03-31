@@ -76,7 +76,8 @@ a:hover {
 
 .actions {
     display: flex;
-    gap: 25px;
+    /* gap: 25px; */
+    gap: 15px;
     align-items: center;
 }
 
@@ -420,6 +421,10 @@ h2.has-dash {
     justify-content: space-between;
 }
 
+.product-actions p{
+    margin: 0;
+}
+
 .about {
     color: rgb(71, 58, 141);
 }
@@ -483,4 +488,17 @@ h2.has-dash {
     font-size: 2.8em;
     font-weight: 700;
     color: rgb(112, 117, 216);
+}
+
+.new-banner {
+    position: absolute;
+    text-align: center;
+    padding: 5px 15px;
+    margin-top: 20px;
+    height: 35px;
+    width: 100px;
+    background-color: rgb(255, 165, 233);
+    color: white;
+    opacity: 100% !important;
+    z-index: 1;
 }
